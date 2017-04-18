@@ -1,0 +1,1150 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/cytb/simple-autoreload-server"
+
+    >simple-autoreload-server (v0.2.6)</a>
+</h1>
+<h4>Simple Web Server with live/autoreload features without browser extensions.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.simple-autoreload-server">module simple-autoreload-server</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-autoreload-server.simple-autoreload-server">
+            function <span class="apidocSignatureSpan"></span>simple-autoreload-server
+            <span class="apidocSignatureSpan">(it)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-autoreload-server.SimpleAutoreloadServer">
+            function <span class="apidocSignatureSpan">simple-autoreload-server.</span>SimpleAutoreloadServer
+            <span class="apidocSignatureSpan">(option)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-autoreload-server.toString">
+            function <span class="apidocSignatureSpan">simple-autoreload-server.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">simple-autoreload-server.</span>SimpleAutoreloadServer.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">simple-autoreload-server.</span>autoreload</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">simple-autoreload-server.</span>option</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">simple-autoreload-server.</span>watch</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.simple-autoreload-server.SimpleAutoreloadServer">module simple-autoreload-server.SimpleAutoreloadServer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-autoreload-server.SimpleAutoreloadServer.SimpleAutoreloadServer">
+            function <span class="apidocSignatureSpan">simple-autoreload-server.</span>SimpleAutoreloadServer
+            <span class="apidocSignatureSpan">(option)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-autoreload-server.SimpleAutoreloadServer.logPrefix">
+            function <span class="apidocSignatureSpan">simple-autoreload-server.SimpleAutoreloadServer.</span>logPrefix
+            <span class="apidocSignatureSpan">(host)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">simple-autoreload-server.SimpleAutoreloadServer.</span>displayName</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.simple-autoreload-server.SimpleAutoreloadServer.prototype">module simple-autoreload-server.SimpleAutoreloadServer.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-autoreload-server.SimpleAutoreloadServer.prototype.broadcast">
+            function <span class="apidocSignatureSpan">simple-autoreload-server.SimpleAutoreloadServer.prototype.</span>broadcast
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-autoreload-server.SimpleAutoreloadServer.prototype.createServer">
+            function <span class="apidocSignatureSpan">simple-autoreload-server.SimpleAutoreloadServer.prototype.</span>createServer
+            <span class="apidocSignatureSpan">(dirs)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-autoreload-server.SimpleAutoreloadServer.prototype.createWatchers">
+            function <span class="apidocSignatureSpan">simple-autoreload-server.SimpleAutoreloadServer.prototype.</span>createWatchers
+            <span class="apidocSignatureSpan">(dirs)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-autoreload-server.SimpleAutoreloadServer.prototype.getLogLevel">
+            function <span class="apidocSignatureSpan">simple-autoreload-server.SimpleAutoreloadServer.prototype.</span>getLogLevel
+            <span class="apidocSignatureSpan">(level)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-autoreload-server.SimpleAutoreloadServer.prototype.log">
+            function <span class="apidocSignatureSpan">simple-autoreload-server.SimpleAutoreloadServer.prototype.</span>log
+            <span class="apidocSignatureSpan">(mode, tag, text)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-autoreload-server.SimpleAutoreloadServer.prototype.setupOptions">
+            function <span class="apidocSignatureSpan">simple-autoreload-server.SimpleAutoreloadServer.prototype.</span>setupOptions
+            <span class="apidocSignatureSpan">(options, logger)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-autoreload-server.SimpleAutoreloadServer.prototype.start">
+            function <span class="apidocSignatureSpan">simple-autoreload-server.SimpleAutoreloadServer.prototype.</span>start
+            <span class="apidocSignatureSpan">(done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-autoreload-server.SimpleAutoreloadServer.prototype.stop">
+            function <span class="apidocSignatureSpan">simple-autoreload-server.SimpleAutoreloadServer.prototype.</span>stop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">simple-autoreload-server.SimpleAutoreloadServer.prototype.</span>logLevel</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">simple-autoreload-server.SimpleAutoreloadServer.prototype.</span>logLevelMap</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.simple-autoreload-server.autoreload">module simple-autoreload-server.autoreload</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-autoreload-server.autoreload.SimpleAutoreloadServer">
+            function <span class="apidocSignatureSpan">simple-autoreload-server.autoreload.</span>SimpleAutoreloadServer
+            <span class="apidocSignatureSpan">(option)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.simple-autoreload-server.option">module simple-autoreload-server.option</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-autoreload-server.option.OptionHelper">
+            function <span class="apidocSignatureSpan">simple-autoreload-server.option.</span>OptionHelper
+            <span class="apidocSignatureSpan">(optionList, defaults)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.simple-autoreload-server.watch">module simple-autoreload-server.watch</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-autoreload-server.watch.RecursiveWatcher">
+            function <span class="apidocSignatureSpan">simple-autoreload-server.watch.</span>RecursiveWatcher
+            <span class="apidocSignatureSpan">(arg$)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.simple-autoreload-server" id="apidoc.module.simple-autoreload-server">module simple-autoreload-server</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.simple-autoreload-server.simple-autoreload-server" id="apidoc.element.simple-autoreload-server.simple-autoreload-server">
+        function <span class="apidocSignatureSpan"></span>simple-autoreload-server
+        <span class="apidocSignatureSpan">(it)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">simple-autoreload-server = function (it){
+  var server;
+  server = new autoreload.SimpleAutoreloadServer(it);
+  server.start();
+  return server;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-autoreload-server.SimpleAutoreloadServer" id="apidoc.element.simple-autoreload-server.SimpleAutoreloadServer">
+        function <span class="apidocSignatureSpan">simple-autoreload-server.</span>SimpleAutoreloadServer
+        <span class="apidocSignatureSpan">(option)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SimpleAutoreloadServer(option){
+  option == null &#x26;&#x26; (option = {});
+  this.websockets = [];
+  this.running = false;
+  this.setupOptions(option);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+(function(){
+module.exports = function(){
+  var autoreload, exports;
+  autoreload = require(&#x27;./lib/autoreload&#x27;);
+  exports = function(it){
+    var server;
+    server = new autoreload.<span class="apidocCodeKeywordSpan">SimpleAutoreloadServer</span>(it);
+    server.start();
+    return server;
+  };
+  return import$(exports, autoreload);
+}();
+function import$(obj, src){
+  var own = {}.hasOwnProperty;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-autoreload-server.toString" id="apidoc.element.simple-autoreload-server.toString">
+        function <span class="apidocSignatureSpan">simple-autoreload-server.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    return function(){
+      var mtime;
+      mtime = fs.statSync(p).mtime;
+      if (last !== mtime) {
+        cached = fs.readFileSync(p, {
+          encoding: enc
+        });
+        cached = cached.<span class="apidocCodeKeywordSpan">toString</span>();
+        last = mtime;
+      }
+      return cached;
+    };
+  };
+  return Injecter;
+}());
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.simple-autoreload-server.SimpleAutoreloadServer" id="apidoc.module.simple-autoreload-server.SimpleAutoreloadServer">module simple-autoreload-server.SimpleAutoreloadServer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.simple-autoreload-server.SimpleAutoreloadServer.SimpleAutoreloadServer" id="apidoc.element.simple-autoreload-server.SimpleAutoreloadServer.SimpleAutoreloadServer">
+        function <span class="apidocSignatureSpan">simple-autoreload-server.</span>SimpleAutoreloadServer
+        <span class="apidocSignatureSpan">(option)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SimpleAutoreloadServer(option){
+  option == null &#x26;&#x26; (option = {});
+  this.websockets = [];
+  this.running = false;
+  this.setupOptions(option);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+(function(){
+module.exports = function(){
+  var autoreload, exports;
+  autoreload = require(&#x27;./lib/autoreload&#x27;);
+  exports = function(it){
+    var server;
+    server = new autoreload.<span class="apidocCodeKeywordSpan">SimpleAutoreloadServer</span>(it);
+    server.start();
+    return server;
+  };
+  return import$(exports, autoreload);
+}();
+function import$(obj, src){
+  var own = {}.hasOwnProperty;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-autoreload-server.SimpleAutoreloadServer.logPrefix" id="apidoc.element.simple-autoreload-server.SimpleAutoreloadServer.logPrefix">
+        function <span class="apidocSignatureSpan">simple-autoreload-server.SimpleAutoreloadServer.</span>logPrefix
+        <span class="apidocSignatureSpan">(host)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">logPrefix = function (host){
+  return (&#x22;[autoreload #&#x22; + process.pid + &#x22; &#x22; + host + &#x22;]&#x22;).cyan;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    switch (ref$ = [mode], false) {
+    case &#x27;error&#x27; !== ref$[0]:
+      return (&#x22;error@&#x22; + tag).red;
+    default:
+      return tag.green;
+    }
+  }());
+  prefix = this.constructor.<span class="apidocCodeKeywordSpan">logPrefix</span>(&#x22;localhost:&#x22; + this.options.port);
+  return console.log(prefix + &#x22; &#x22; + coloredTag + &#x22; &#x22; + text);
+};
+prototype.stop = function(){
+  var ref$, ref1$, ex;
+  try {
+    if ((ref$ = this.watcher) != null) {
+      ref$.stop();
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.simple-autoreload-server.SimpleAutoreloadServer.prototype" id="apidoc.module.simple-autoreload-server.SimpleAutoreloadServer.prototype">module simple-autoreload-server.SimpleAutoreloadServer.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.simple-autoreload-server.SimpleAutoreloadServer.prototype.broadcast" id="apidoc.element.simple-autoreload-server.SimpleAutoreloadServer.prototype.broadcast">
+        function <span class="apidocSignatureSpan">simple-autoreload-server.SimpleAutoreloadServer.prototype.</span>broadcast
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">broadcast = function (data){
+  var json, i$, x$, ref$, len$, ex, results$ = [];
+  try {
+    json = JSON.stringify(data);
+    this.log(&#x22;debug&#x22;, &#x22;broadcast&#x22;, &#x22;to &#x22; + this.websockets.length + &#x22; sockets: &#x22; + json);
+    for (i$ = 0, len$ = (ref$ = this.websockets).length; i$ &#x3c; len$; ++i$) {
+      x$ = ref$[i$];
+      results$.push(x$.send(json));
+    }
+    return results$;
+  } catch (e$) {
+    ex = e$;
+    return this.log(&#x22;error&#x22;, &#x22;broadcast&#x22;, ex.message);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      this$.log(&#x22;verbose&#x22;, &#x22;watch&#x22;, &#x22;updated &#x22; + target);
+      httpPath = &#x27;&#x27;;
+      try {
+        if (that = /^[^/].*$/.exec(path.relative(dir.path, target))) {
+          httpPath = &#x22;/&#x22; + that[0];
+        }
+      } catch (e$) {}
+      return this$.<span class="apidocCodeKeywordSpan">broadcast</span>({
+        type: &#x27;update&#x27;,
+        path: httpPath,
+        reload: shouldReload(httpPath)
+      });
+    }
+  }
+}));
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-autoreload-server.SimpleAutoreloadServer.prototype.createServer" id="apidoc.element.simple-autoreload-server.SimpleAutoreloadServer.prototype.createServer">
+        function <span class="apidocSignatureSpan">simple-autoreload-server.SimpleAutoreloadServer.prototype.</span>createServer
+        <span class="apidocSignatureSpan">(dirs)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createServer = function (dirs){
+  var inject, encoding, i$, x$, ref$, len$, app, y$, opts, ref1$, ref2$;
+  inject = [].concat(this.options.inject);
+  encoding = this.options.encoding;
+  if (this.options.builtinScript) {
+    inject = inject.concat({
+      which: new RegExp(&#x22;.*\\.html?$&#x22;),
+      where: new RegExp(&#x22;&#x3c;/(body|head|html)&#x3e;&#x22;, &#x22;i&#x22;),
+      type: &#x22;file&#x22;,
+      content: path.resolve(__dirname, &#x27;../client.html&#x27;),
+      prepend: true,
+      encoding: encoding
+    });
+  }
+  for (i$ = 0, len$ = (ref$ = [].concat(inject)).length; i$ &#x3c; len$; ++i$) {
+    x$ = ref$[i$];
+    if (x$.type === &#x22;file&#x22;) {
+      x$.content = path.resolve(this.basedir, x$.content);
+    }
+  }
+  app = (ref$ = this.options.connectApp) != null
+    ? ref$
+    : connect();
+  if (this.getLogLevel(this.options.log) &#x3e;= this.logLevel.verbose) {
+    app.use(connect.logger(&#x27;:ar-prefix :remote-addr :method &#x22;:url HTTP/:http-version&#x22; :status :referrer :user-agent&#x27;));
+  }
+  for (i$ = 0, len$ = dirs.length; i$ &#x3c; len$; ++i$) {
+    y$ = dirs[i$];
+    if (this.options.listDirectory) {
+      app.use(y$.target, connect.directory(y$.path, {
+        icons: true
+      }));
+    }
+    opts = (ref$ = (ref1$ = (ref2$ = {}, ref2$.path = y$.path, ref2$.target = y$.target, ref2$), ref1$.inject = inject, ref1$.encoding
+ = encoding, ref1$), ref$.defaultPages = this.defaultPages, ref$);
+    app.use(y$.target, bind$(new InjectionRouter(opts), &#x27;route&#x27;));
+    app.use(y$.target, connect[&#x27;static&#x27;](y$.path));
+  }
+  return http.createServer(app);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  res$ = [];
+  for (i$ = 0, len$ = mounts.length; i$ &#x3c; len$; ++i$) {
+    x$ = mounts[i$];
+    res$.push((ref$ = import$({}, x$), ref$.path = path.resolve(this.basedir, x$.path), ref$));
+  }
+  dirs = res$;
+  this.watchers = this.createWatchers(dirs);
+  this.server = this.<span class="apidocCodeKeywordSpan">createServer</span>(dirs);
+  this.watchers.map(function(it){
+    return it.start();
+  });
+} catch (e$) {
+  ex = e$;
+  this.log(&#x22;error&#x22;, &#x22;server&#x22;, ex.message);
+  this.log(&#x22;error&#x22;, &#x22;server&#x22;, ex.stack);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-autoreload-server.SimpleAutoreloadServer.prototype.createWatchers" id="apidoc.element.simple-autoreload-server.SimpleAutoreloadServer.prototype.createWatchers">
+        function <span class="apidocSignatureSpan">simple-autoreload-server.SimpleAutoreloadServer.prototype.</span>createWatchers
+        <span class="apidocSignatureSpan">(dirs)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createWatchers = function (dirs){
+  var shouldReload, watchObjs, this$ = this;
+  if (this.options.recursive) {
+    this.log(&#x22;verbose&#x22;, &#x22;server&#x22;, &#x22;init with recursive-option. this may take a while.&#x22;);
+  }
+  shouldReload = OptionHelper.readPattern(this.options.reload, this.options.ignoreCase, this.options.includeHidden);
+  watchObjs = dirs.map(function(dir){
+    var matcher;
+    matcher = OptionHelper.readPattern(dir.watch, dir.ignoreCase, dir.includeHidden);
+    return new RecursiveWatcher(import$(clone$(dir), {
+      delay: this$.options.watchDelay,
+      error: function(arg$, src){
+        var message;
+        message = arg$.message;
+        return this$.log(&#x22;error&#x22;, &#x22;watch&#x22;, src + &#x22; Error: &#x22; + message);
+      },
+      update: function(arg$, target){
+        var httpPath, that;
+        if (!matcher(target)) {
+          return this$.log(&#x22;debug&#x22;, &#x22;watch&#x22;, &#x22;(ignored)&#x22;.cyan + &#x22; &#x22; + target);
+        } else {
+          this$.log(&#x22;verbose&#x22;, &#x22;watch&#x22;, &#x22;updated &#x22; + target);
+          httpPath = &#x27;&#x27;;
+          try {
+            if (that = /^[^/].*$/.exec(path.relative(dir.path, target))) {
+              httpPath = &#x22;/&#x22; + that[0];
+            }
+          } catch (e$) {}
+          return this$.broadcast({
+            type: &#x27;update&#x27;,
+            path: httpPath,
+            reload: shouldReload(httpPath)
+          });
+        }
+      }
+    }));
+  });
+  return watchObjs;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    : []);
+  res$ = [];
+  for (i$ = 0, len$ = mounts.length; i$ &#x3c; len$; ++i$) {
+    x$ = mounts[i$];
+    res$.push((ref$ = import$({}, x$), ref$.path = path.resolve(this.basedir, x$.path), ref$));
+  }
+  dirs = res$;
+  this.watchers = this.<span class="apidocCodeKeywordSpan">createWatchers</span>(dirs);
+  this.server = this.createServer(dirs);
+  this.watchers.map(function(it){
+    return it.start();
+  });
+} catch (e$) {
+  ex = e$;
+  this.log(&#x22;error&#x22;, &#x22;server&#x22;, ex.message);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-autoreload-server.SimpleAutoreloadServer.prototype.getLogLevel" id="apidoc.element.simple-autoreload-server.SimpleAutoreloadServer.prototype.getLogLevel">
+        function <span class="apidocSignatureSpan">simple-autoreload-server.SimpleAutoreloadServer.prototype.</span>getLogLevel
+        <span class="apidocSignatureSpan">(level)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getLogLevel = function (level){
+  var i$, to$, i;
+  level == null &#x26;&#x26; (level = &#x22;normal&#x22;);
+  switch (false) {
+  case typeof level !== &#x22;boolean&#x22;:
+    return level &#x26;&#x26; 2 || 0;
+  case typeof level !== &#x22;string&#x22;:
+    for (i$ = 0, to$ = this.logLevel.length; i$ &#x3c; to$; ++i$) {
+      i = i$;
+      if (this.logLevel[i].level === level) {
+        return i;
+      }
+    }
+    return 2;
+  case !(0 &#x3c;= level &#x26;&#x26; level &#x3c; this.logLevel.length):
+    return level;
+  default:
+    return 2;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    return level;
+  default:
+    return 2;
+  }
+};
+prototype.log = function(mode, tag, text){
+  var level, coloredTag, prefix;
+  level = this.<span class="apidocCodeKeywordSpan">getLogLevel</span>(this.options.log);
+  if (!in$(mode, this.logLevel[level].tags)) {
+    return;
+  }
+  coloredTag = (function(){
+    var ref$;
+    switch (ref$ = [mode], false) {
+    case &#x27;error&#x27; !== ref$[0]:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-autoreload-server.SimpleAutoreloadServer.prototype.log" id="apidoc.element.simple-autoreload-server.SimpleAutoreloadServer.prototype.log">
+        function <span class="apidocSignatureSpan">simple-autoreload-server.SimpleAutoreloadServer.prototype.</span>log
+        <span class="apidocSignatureSpan">(mode, tag, text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">log = function (mode, tag, text){
+  var level, coloredTag, prefix;
+  level = this.getLogLevel(this.options.log);
+  if (!in$(mode, this.logLevel[level].tags)) {
+    return;
+  }
+  coloredTag = (function(){
+    var ref$;
+    switch (ref$ = [mode], false) {
+    case &#x27;error&#x27; !== ref$[0]:
+      return (&#x22;error@&#x22; + tag).red;
+    default:
+      return tag.green;
+    }
+  }());
+  prefix = this.constructor.logPrefix(&#x22;localhost:&#x22; + this.options.port);
+  return console.log(prefix + &#x22; &#x22; + coloredTag + &#x22; &#x22; + text);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    out = optionHelper.assure(out, defaults);
+  }
+  if (!(out.onmessage instanceof Function)) {
+    out.onmessage = function(){};
+  }
+  this.options = out;
+  if (json != null) {
+    this.<span class="apidocCodeKeywordSpan">log</span>(&#x22;verbose&#x22;, &#x22;options&#x22;, &#x22;config loaded: &#x22; +
+file);
+    return this.log(&#x22;verbose&#x22;, &#x22;options&#x22;, &#x22;change working directory to &#x22; + dir);
+  }
+};
+prototype.logLevel = [
+  {
+    level: &#x27;silent&#x27;,
+    tags: []
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-autoreload-server.SimpleAutoreloadServer.prototype.setupOptions" id="apidoc.element.simple-autoreload-server.SimpleAutoreloadServer.prototype.setupOptions">
+        function <span class="apidocSignatureSpan">simple-autoreload-server.SimpleAutoreloadServer.prototype.</span>setupOptions
+        <span class="apidocSignatureSpan">(options, logger)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setupOptions = function (options, logger){
+  var optionHelper, getRootDef, defaults, defaultsSrc, key, names, base, ref$, i$, len$, def, assured, json, preFile, file, dir,
+nextDir, x$, newBase, y$, ref1$, out;
+  logger == null &#x26;&#x26; (logger = function(){});
+  options = import$({}, options);
+  optionHelper = new OptionHelper;
+  getRootDef = function(pname, name, alter){
+    alter == null &#x26;&#x26; (alter = name);
+    return function(options, defMap){
+      var that, ref$, ref1$, ref2$;
+      switch (false) {
+      case (that = (ref$ = options[pname]) != null ? ref$[name] : void 8) == null:
+        return that;
+      case !(that = (ref1$ = options[pname]) != null ? (ref2$ = ref1$[0]) != null ? ref2$[name] : void 8 : void 8):
+        return that;
+      case (that = options[name]) == null:
+        return that;
+      default:
+        return defMap[alter];
+      }
+    };
+  };
+  defaults = {};
+  defaultsSrc = {
+    mount: [&#x27;watch&#x27;, &#x27;recursive&#x27;, &#x27;followSymlinks&#x27;, &#x27;ignoreCase&#x27;, &#x27;includeHidden&#x27;],
+    inject: [&#x27;where&#x27;, &#x27;which&#x27;, &#x27;type&#x27;, &#x27;prepend&#x27;, &#x27;includeHidden&#x27;]
+  };
+  for (key in defaultsSrc) {
+    names = defaultsSrc[key];
+    base = (ref$ = defaults[key]) != null
+      ? ref$
+      : defaults[key] = {};
+    for (i$ = 0, len$ = names.length; i$ &#x3c; len$; ++i$) {
+      def = names[i$];
+      base[def] = getRootDef(key, def);
+    }
+  }
+  assured = optionHelper.assure(options, defaults);
+  json = null;
+  preFile = file = null;
+  dir = null;
+  if (assured.searchConfig) {
+    nextDir = process.cwd();
+    do {
+      dir = nextDir;
+      preFile = file;
+      file = path.resolve(dir, assured.config);
+      try {
+        x$ = fs.readFileSync(file, {
+          encoding: this.encoding
+        });
+        json = JSON.parse(x$.toString());
+      } catch (e$) {}
+      nextDir = path.join(dir, &#x22;..&#x22;);
+    } while (json == null &#x26;&#x26; preFile !== file);
+  }
+  base = json != null
+    ? json
+    : {};
+  if (json != null) {
+    this.basedir = path.resolve(dir, path.dirname(file));
+    process.chdir(this.basedir);
+  } else {
+    this.basedir = process.cwd();
+  }
+  newBase = import$(import$({}, base), options);
+  for (i$ = 0, len$ = (ref$ = [&#x27;inject&#x27;, &#x27;mount&#x27;]).length; i$ &#x3c; len$; ++i$) {
+    y$ = ref$[i$];
+    newBase[y$] = [].concat((ref1$ = base[y$]) != null
+      ? ref1$
+      : [], (ref1$ = options[y$]) != null
+      ? ref1$
+      : []);
+  }
+  out = optionHelper.assure(newBase, defaults);
+  if (out.inject == null || out.inject.length &#x3c; 1) {
+    out.inject = [];
+    try {
+      file = path.resolve(this.basedir, &#x27;.autoreload.html&#x27;);
+      if ((ref$ = fs.lstatSync(file)) != null &#x26;&#x26; ref$.isFile()) {
+        out.inject.push({
+          content: file
+        });
+      }
+    } catch (e$) {}
+    out = optionHelper.assure(out, defaults);
+  }
+  if (!(out.onmessage instanceof Function)) {
+    out.onmessage = function(){};
+  }
+  this.options = out;
+  if (json != null) {
+    this.log(&#x22;verbose&#x22;, &#x22;options&#x22;, &#x22;config loaded: &#x22; + file);
+    return this.log(&#x22;verbose&#x22;, &#x22;options&#x22;, &#x22;change working directory to &#x22; + dir);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+SimpleAutoreloadServer.logPrefix = function(host){
+  return (&#x22;[autoreload #&#x22; + process.pid + &#x22; &#x22; + host + &#x22;]&#x22;).cyan;
+};
+function SimpleAutoreloadServer(option){
+  option == null &#x26;&#x26; (option = {});
+  this.websockets = [];
+  this.running = false;
+  this.<span class="apidocCodeKeywordSpan">setupOptions</span>(option);
+}
+prototype.setupOptions = function(options, logger){
+  var optionHelper, getRootDef, defaults, defaultsSrc, key, names, base, ref$, i$, len$, def, assured, json, preFile, file, dir,
+nextDir, x$, newBase, y$, ref1$, out;
+  logger == null &#x26;&#x26; (logger = function(){});
+  options = import$({}, options);
+  optionHelper = new OptionHelper;
+  getRootDef = function(pname, name, alter){
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-autoreload-server.SimpleAutoreloadServer.prototype.start" id="apidoc.element.simple-autoreload-server.SimpleAutoreloadServer.prototype.start">
+        function <span class="apidocSignatureSpan">simple-autoreload-server.SimpleAutoreloadServer.prototype.</span>start
+        <span class="apidocSignatureSpan">(done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function (done){
+  var mounts, ref$, dirs, res$, i$, x$, len$, ex, listen, y$, this$ = this;
+  mounts = [];
+  try {
+    if (this.running) {
+      this.stop();
+    }
+    mounts = mounts.concat((ref$ = import$({}, this.options), ref$.target = &#x22;/&#x22;, ref$));
+    mounts = mounts.concat((ref$ = this.options.mount) != null
+      ? ref$
+      : []);
+    res$ = [];
+    for (i$ = 0, len$ = mounts.length; i$ &#x3c; len$; ++i$) {
+      x$ = mounts[i$];
+      res$.push((ref$ = import$({}, x$), ref$.path = path.resolve(this.basedir, x$.path), ref$));
+    }
+    dirs = res$;
+    this.watchers = this.createWatchers(dirs);
+    this.server = this.createServer(dirs);
+    this.watchers.map(function(it){
+      return it.start();
+    });
+  } catch (e$) {
+    ex = e$;
+    this.log(&#x22;error&#x22;, &#x22;server&#x22;, ex.message);
+    this.log(&#x22;error&#x22;, &#x22;server&#x22;, ex.stack);
+    if (done != null) {
+      done(ex, this);
+    }
+    return null;
+  }
+  listen = {
+    port: (ref$ = this.options).port,
+    host: ref$.host,
+    path: ref$.path
+  };
+  y$ = this.server;
+  y$.on(&#x27;upgrade&#x27;, function(req, sock, head){
+    var addr, x$;
+    if (!WebSocket.isWebSocket(req)) {
+      return;
+    }
+    addr = sock.remoteAddress + &#x22;:&#x22; + sock.remotePort;
+    x$ = new WebSocket(req, sock, head);
+    x$.on(&#x27;open&#x27;, function(){
+      this$.log(&#x22;verbose&#x22;, &#x27;websocket&#x27;, addr + &#x22; - new connection&#x22;);
+      return x$.send(JSON.stringify({
+        type: &#x27;open&#x27;,
+        log: this$.options.clientLog
+      }));
+    });
+    x$.on(&#x27;message&#x27;, function(arg$){
+      var data;
+      data = arg$.data;
+      this$.log(&#x22;verbose&#x22;, &#x27;websocket&#x27;, addr + &#x22; - received message &#x22; + data);
+      return this$.options.onmessage(data, x$);
+    });
+    x$.on(&#x27;close&#x27;, function(){
+      this$.log(&#x22;verbose&#x22;, &#x27;websocket&#x27;, addr + &#x22; - connection closed&#x22;);
+      return this$.websockets = this$.websockets.filter((function(it){
+        return it !== x$;
+      }));
+    });
+    this$.websockets.push(x$);
+    return x$;
+  });
+  y$.on(&#x27;error&#x27;, function(err){
+    var ref$;
+    switch (ref$ = [err.code], false) {
+    case &#x27;EADDRINUSE&#x27; !== ref$[0]:
+      this$.log(&#x22;error&#x22;, &#x27;server&#x27;, &#x22;Cannot use &#x22; + (listen.host + &#x22;&#x22;).green + &#x22;:&#x22; + (listen.port + &#x22;&#x22;).green + &#x22; as a listen address
+. Error: &#x22; + err.message + &#x22;&#x22;);
+      return this$.watchers.map(function(it){
+        return it.stop();
+      });
+    }
+  });
+  y$.listen(listen.port | 0, listen.host, 511, function(){
+    var i$, x$, ref$, len$, that, y$, child, port, address, serverUrl;
+    this$.running = true;
+    this$.abspath = path.resolve(process.cwd(), listen.path) + &#x22;&#x22;;
+    for (i$ = 0, len$ = (ref$ = mounts.slice(1)).length; i$ &#x3c; len$; ++i$) {
+      x$ = ref$[i$];
+      this$.log(&#x22;info&#x22;, &#x22;server&#x22;, &#x22;mounted &#x22; + x$.path + &#x22; to &#x22; + x$.target);
+    }
+    this$.log(&#x22;normal&#x22;, &#x22;server&#x22;, &#x22;started on :&#x22; + (listen.port + &#x22;&#x22;).green + &#x22; at &#x22; + this$.abspath);
+    if (that = this$.options.execute != null &#x26;&#x26; this$.options.execute) {
+      this$.log(&#x22;info&#x22;, &#x22;server&#x22;, &#x22;execute command: &#x22; + that);
+      y$ = child = child_process.exec(that, {
+        stdio: &#x27;ignore&#x27;
+      });
+      y$.unref();
+      if (this$.options.stopOnExit) {
+        this$.log(&#x22;info&#x22;, &#x22;server&#x22;, &#x22;server will stop when the command has exit.&#x22;);
+        child.on(&#x27;exit&#x27;, function(){
+          this$.log(&#x22;info&#x22;, &#x22;server&#x22;, &#x22;child command has finished.&#x22;);
+          return this$.stop();
+        });
+      }
+    }
+    if (this$.options.browse) {
+      ref$ = this$.server.address(), port = ref$.port, address = ref$.address;
+      if (address === &#x27;0.0.0.0&#x27; || address === &#x27;::&#x27;) {
+        address = &#x22;localhost&#x22;;
+      }
+      serverUrl = (function(){
+        switch (typeof this.options.browse) {
+        case &#x22;string&#x22;:
+          return this.options.browse;
+        default:
+          return &#x22;http://&#x22; + address + &#x22;:&#x22; + port + &#x22;/&#x22;;
+        }
+      }.call(this$));
+      this$.log(&#x22;info&#x22;, &#x22;server&#x22;, &#x22;open &#x22; + serverUrl);
+      opener(serverUrl, {
+        stdio: &#x27;ignore&#x27;
+      }).unref();
+    }
+    if (done != null) {
+      return done(null, this$);
+    }
+  });
+  return y$;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+(function(){
+module.exports = function(){
+  var autoreload, exports;
+  autoreload = require(&#x27;./lib/autoreload&#x27;);
+  exports = function(it){
+    var server;
+    server = new autoreload.SimpleAutoreloadServer(it);
+    server.<span class="apidocCodeKeywordSpan">start</span>();
+    return server;
+  };
+  return import$(exports, autoreload);
+}();
+function import$(obj, src){
+  var own = {}.hasOwnProperty;
+  for (var key in src) if (own.call(src, key)) obj[key] = src[key];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-autoreload-server.SimpleAutoreloadServer.prototype.stop" id="apidoc.element.simple-autoreload-server.SimpleAutoreloadServer.prototype.stop">
+        function <span class="apidocSignatureSpan">simple-autoreload-server.SimpleAutoreloadServer.prototype.</span>stop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stop = function (){
+  var ref$, ref1$, ex;
+  try {
+    if ((ref$ = this.watcher) != null) {
+      ref$.stop();
+    }
+    if ((ref1$ = this.server) != null) {
+      ref1$.close();
+    }
+    this.running = false;
+    return this.log(&#x22;normal&#x22;, &#x22;server&#x22;, &#x22;stopped.&#x22;);
+  } catch (e$) {
+    ex = e$;
+    return this.log(&#x22;error&#x22;, &#x22;server&#x22;, ex.message);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  prefix = this.constructor.logPrefix(&#x22;localhost:&#x22; + this.options.port);
+  return console.log(prefix + &#x22; &#x22; + coloredTag + &#x22; &#x22; + text);
+};
+prototype.stop = function(){
+  var ref$, ref1$, ex;
+  try {
+    if ((ref$ = this.watcher) != null) {
+      ref$.<span class="apidocCodeKeywordSpan">stop</span>();
+    }
+    if ((ref1$ = this.server) != null) {
+      ref1$.close();
+    }
+    this.running = false;
+    return this.log(&#x22;normal&#x22;, &#x22;server&#x22;, &#x22;stopped.&#x22;);
+  } catch (e$) {
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.simple-autoreload-server.autoreload" id="apidoc.module.simple-autoreload-server.autoreload">module simple-autoreload-server.autoreload</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.simple-autoreload-server.autoreload.SimpleAutoreloadServer" id="apidoc.element.simple-autoreload-server.autoreload.SimpleAutoreloadServer">
+        function <span class="apidocSignatureSpan">simple-autoreload-server.autoreload.</span>SimpleAutoreloadServer
+        <span class="apidocSignatureSpan">(option)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SimpleAutoreloadServer(option){
+  option == null &#x26;&#x26; (option = {});
+  this.websockets = [];
+  this.running = false;
+  this.setupOptions(option);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+(function(){
+module.exports = function(){
+  var autoreload, exports;
+  autoreload = require(&#x27;./lib/autoreload&#x27;);
+  exports = function(it){
+    var server;
+    server = new autoreload.<span class="apidocCodeKeywordSpan">SimpleAutoreloadServer</span>(it);
+    server.start();
+    return server;
+  };
+  return import$(exports, autoreload);
+}();
+function import$(obj, src){
+  var own = {}.hasOwnProperty;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.simple-autoreload-server.option" id="apidoc.module.simple-autoreload-server.option">module simple-autoreload-server.option</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.simple-autoreload-server.option.OptionHelper" id="apidoc.element.simple-autoreload-server.option.OptionHelper">
+        function <span class="apidocSignatureSpan">simple-autoreload-server.option.</span>OptionHelper
+        <span class="apidocSignatureSpan">(optionList, defaults)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function OptionHelper(optionList, defaults){
+  var i$, ref$, len$, optionEntry, key, value, ref1$, ref2$;
+  this.optionList = optionList != null ? optionList : optionsSource;
+  this.defaults = defaults != null
+    ? defaults
+    : {};
+  this.optionMap = {};
+  for (i$ = 0, len$ = (ref$ = this.optionList).length; i$ &#x3c; len$; ++i$) {
+    optionEntry = ref$[i$];
+    for (key in optionEntry) {
+      value = optionEntry[key];
+      ((ref2$ = (ref1$ = this.optionMap)[key]) != null
+        ? ref2$
+        : ref1$[key] = {})[value] = optionEntry;
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.simple-autoreload-server.watch" id="apidoc.module.simple-autoreload-server.watch">module simple-autoreload-server.watch</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.simple-autoreload-server.watch.RecursiveWatcher" id="apidoc.element.simple-autoreload-server.watch.RecursiveWatcher">
+        function <span class="apidocSignatureSpan">simple-autoreload-server.watch.</span>RecursiveWatcher
+        <span class="apidocSignatureSpan">(arg$)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function RecursiveWatcher(arg$){
+  var ref$;
+  this.path = arg$.path, this.delay = (ref$ = arg$.delay) != null ? ref$ : 30, this.update = (ref$ = arg$.update) != null
+    ? ref$
+    : function(){}, this.error = (ref$ = arg$.error) != null
+    ? ref$
+    : function(){}, this.recursive = (ref$ = arg$.recursive) != null ? ref$ : false, this.followSymlinks = (ref$ = arg$.followSymlinks
+) != null ? ref$ : false;
+  this.watchers = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
