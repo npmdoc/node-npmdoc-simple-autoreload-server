@@ -74,15 +74,6 @@
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.simple-autoreload-server.toString">
-            function <span class="apidocSignatureSpan">simple-autoreload-server.</span>toString
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-        <li>
-
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">simple-autoreload-server.</span>SimpleAutoreloadServer.prototype</span>
 
         </li>
@@ -315,37 +306,6 @@ module.exports = function(){
 }();
 function import$(obj, src){
   var own = {}.hasOwnProperty;
-...</pre></li>
-    </ul>
-
-
-
-    <h2>
-        <a href="#apidoc.element.simple-autoreload-server.toString" id="apidoc.element.simple-autoreload-server.toString">
-        function <span class="apidocSignatureSpan">simple-autoreload-server.</span>toString
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">toString = function () {
-    return text;
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-    return function(){
-      var mtime;
-      mtime = fs.statSync(p).mtime;
-      if (last !== mtime) {
-        cached = fs.readFileSync(p, {
-          encoding: enc
-        });
-        cached = cached.<span class="apidocCodeKeywordSpan">toString</span>();
-        last = mtime;
-      }
-      return cached;
-    };
-  };
-  return Injecter;
-}());
 ...</pre></li>
     </ul>
 
@@ -688,22 +648,21 @@ prototype.log = function(mode, tag, text){
   return console.log(prefix + " " + coloredTag + " " + text);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-    out = optionHelper.assure(out, defaults);
+    x$.initCustomEvent(ename, bubbles, cancelable, detail);
+    return x$;
   }
-  if (!(out.onmessage instanceof Function)) {
-    out.onmessage = function(){};
-  }
-  this.options = out;
-  if (json != null) {
-    this.<span class="apidocCodeKeywordSpan">log</span>("verbose", "options", "config loaded: " +
-file);
-    return this.log("verbose", "options", "change working directory to " + dir);
-  }
-};
-prototype.logLevel = [
-  {
-    level: 'silent',
-    tags: []
+  return constructor;
+}(window.Event));
+AutoreloadClient.dispatcher = curry$(function(command, handler, data){
+  var eventDetail, ref$, x$;
+  this.<span class="apidocCodeKeywordSpan">log</span>(command + "");
+  if (this.options.dispatchEvent) {
+    eventDetail = {
+      cancelable: true,
+      detail: (ref$ = import$({}, data), ref$.client = this, ref$)
+    };
+    x$ = new constructor.CustomEvent(constructor.name + "." + command, eventDetail);
+    if (!window.dispatchEvent(x$)) {
 ...</pre></li>
     </ul>
 
