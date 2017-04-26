@@ -1,6 +1,6 @@
 # npmdoc-simple-autoreload-server
 
-#### api documentation for  [simple-autoreload-server (v0.2.6)](https://github.com/cytb/simple-autoreload-server)  [![npm package](https://img.shields.io/npm/v/npmdoc-simple-autoreload-server.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-simple-autoreload-server) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-simple-autoreload-server.svg)](https://travis-ci.org/npmdoc/node-npmdoc-simple-autoreload-server)
+#### basic api documentation for  [simple-autoreload-server (v0.2.6)](https://github.com/cytb/simple-autoreload-server)  [![npm package](https://img.shields.io/npm/v/npmdoc-simple-autoreload-server.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-simple-autoreload-server) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-simple-autoreload-server.svg)](https://travis-ci.org/npmdoc/node-npmdoc-simple-autoreload-server)
 
 #### Simple Web Server with live/autoreload features without browser extensions.
 
